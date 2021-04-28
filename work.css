@@ -1,0 +1,151 @@
+html {
+  background-color: #304a57ff;
+  text-align: center;
+  min-width: 350px;
+  color: white;
+  /* font-family: "Prosto One"; */
+}
+
+#pomodoro {
+  /* margin: 0 auto; */
+  /* padding: 0px 10px; */
+  position: absolute;
+  width: 100%;
+  /* border: 1px solid red; */
+}
+
+.hideDivs {
+  margin-top: 200px;
+  width: 100%;
+}
+
+/* #work-sketch-holder {
+  border: 1px solid red;
+} */
+
+body {
+  margin: 0;
+}
+
+.settings {
+  margin: auto;
+  width: 80%;
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr;
+  align-items: center;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.timerDisplay {
+  color: #acacacff;
+  font-size: 4em;
+  font-weight: bold;
+}
+
+.btn {
+  margin: 10px;
+  padding: 8px 10px;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+  border: 2px solid rgb(128, 165, 245);
+}
+
+#start-btn {
+  height: 40px;
+  width: 90px;
+  border-radius: 20px;
+  background: #4f5387;
+}
+
+.btn-settings {
+  background-color: #77779c;
+  margin: 10px;
+  border: 1px solid #4e4e5b;
+  border-radius: 10px;
+  padding: 2px 5px;
+  min-width: 40px;
+  color: white;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+.settings {
+  margin: auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr;
+}
+
+#reset {
+  border-radius: 50px;
+  width: 80px;
+  height: 80px;
+  background: #5281b6;
+}
+
+.container {
+  position: relative;
+  /* width: 60ch; */
+  width: 100%;
+  margin: auto;
+  border: 1px solid rgba(255, 0, 0, 0);
+}
+
+.reading {
+  overflow: hidden;
+  width: 100%;
+}
+
+.reading-gif {
+  width: 100%;
+}
+
+/* #work p,
+#break p {
+  color: #acacacff;
+  background: rgb(42, 64, 75);
+  padding: 5px;
+} */
+
+/* 
+
+.container {
+  padding: 0px;
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+#status {
+  width: 70%;
+  color: #acacacff;
+  font-size: 2em;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.timerDisplay {
+  color: #acacacff;
+  font-size: 4em;
+  font-weight: bold;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#work,
+#break {
+  color: #acacacff;
+  font-weight: bold;
+}
+
+*/

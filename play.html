@@ -1,16 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <script src="p5.js"></script>
+    <script src="p5.sound.min.js"></script>
+    <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+    <script src="play.js" defer></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//fonts.googleapis.com/css?family=Pacifico"
+    />
+    <link rel="stylesheet" type="text/css" href="play.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+  </head>
 
-<head>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.2.0/p5.js"></script>
-  <script src="sketch.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.2.0/addons/p5.sound.min.js"></script>
-
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <meta charset="utf-8" />
-
-</head>
-
-<body>
-</body>
+  <body>
+    <div id="p5_loading" class="loadingclass">
+      <div class="loader">Loading...</div>
+    </div>
+    <h1>
+      <a href="index.html"><button>BACK</button></a>
+    </h1>
+    <div id="sketch-holder">
+      <!-- Our sketch will go here! -->
+    </div>
+  </body>
 </html>

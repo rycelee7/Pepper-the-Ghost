@@ -1,0 +1,125 @@
+body {
+  background-image: url("uiDesigns/Back1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* overflow-y: hidden; */
+  /* overflow-x: hidden; */
+  position: absolute;
+  animation: 1s ease-out 0s 1 slideInFromBottom;
+}
+
+.header {
+  margin: 1em;
+  max-width: 100%;
+  height: auto;
+  /* border: 1px solid red; */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img {
+  max-width: 40%;
+  margin: 0.4em;
+  height: auto;
+  position: relative;
+  bottom: 0px;
+}
+
+img[src="uiDesigns/title.png"] {
+  max-width: 90%;
+  height: auto;
+}
+
+.buttons {
+  /* border: 1px solid red; */
+  position: relative;
+  top: 17em;
+}
+
+.buttons1 {
+  animation: 3s ease-in-out 0s 1 fadeIn;
+}
+
+.buttons2 {
+  animation: 4s ease-in-out 0s 1 fadeIn;
+}
+
+.buttons3 {
+  animation: 5s ease-in-out 0s 1 fadeIn;
+}
+
+.container {
+  min-height: 550px;
+  height: auto !important;
+  height: 600px;
+}
+
+.back2 {
+  background-image: url("uiDesigns/Back2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  left: 0px;
+  top: 15%;
+  bottom: 0px;
+  min-height: 550px;
+  height: auto !important;
+  height: 600px;
+  position: absolute;
+  z-index: -3;
+  animation: 1s ease-out 0s 1 slideInFromBottom;
+}
+
+.back3 {
+  position: absolute;
+  background-image: url("uiDesigns/Back3.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  left: 0px;
+  top: 10%;
+  bottom: 0px;
+  z-index: -2;
+  animation: 1s ease-out 0s 1 slideInFromBottom;
+}
+
+.back4 {
+  position: absolute;
+  background-image: url("uiDesigns/Back4.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  left: 0px;
+  top: 15%;
+  bottom: 0px;
+  z-index: -1;
+  animation: 1s ease-out 0s 1 slideInFromBottom;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* 
+@keyframes glow {
+    from {
+        box-shadow: 0 0 30px -10px red;
+    }
+    to {
+        box-shadow: 0 0 30px 10px red;
+    }
+} */

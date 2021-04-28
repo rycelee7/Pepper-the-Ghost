@@ -1,0 +1,10 @@
+{
+  "short_name": "Pepper the Ghost",
+  "name": "Pepper the Ghost",
+  "start_url": "/",
+  "background_color": "#3367D6",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#3367D6",
+  "description": "Pepper the Ghost"
+}

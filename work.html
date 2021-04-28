@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="p5.js"></script>
+    <script src="p5.sound.min.js"></script>
+    <script src="work.js" defer></script>
+    <title>Pepperdoro Timer</title>
+    <link rel="stylesheet" href="work.css" />
+  </head>
+
+  <body>
+    <link
+      href="https://fonts.googleapis.com/css?family=Prosto One"
+      rel="stylesheet"
+    />
+
+    <div class="container">
+      <!--  -->
+      <div id="pomodoro">
+        <div id="status"></div>
+        <div class="timerDisplay">25:00</div>
+        <button onclick="startPomodoro()" id="start-btn" class="btn">
+          START
+        </button>
+      </div>
+
+      <!--  -->
+      <div class="hideDivs">
+        <div class="settings">
+          <div id="work">
+            <p>Work Duration</p>
+            <button class="btn-settings" id="work-plus">+</button>
+            <div><span id="work-min">25</span> mins</div>
+            <button class="btn-settings" id="work-minus">-</button>
+          </div>
+
+          <button id="reset" class="btn">RESET</button>
+
+          <div id="break">
+            <p>Break Duration</p>
+            <button class="btn-settings" id="break-plus">+</button>
+
+            <div>
+              <span id="break-min">5</span>
+              mins
+            </div>
+
+            <button class="btn-settings" id="break-minus">-</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- gif -->
+      <div class="reading">
+        <img
+          class="reading-gif"
+          src="animations/reading.gif"
+          alt="pepper reading"
+        />
+        <img
+          class="reading-gif"
+          src="animations/break.gif"
+          alt="pepper break"
+        />
+        <div id="work-sketch-holder">
+          <!-- Our sketch will go here! -->
+        </div>
+      </div>
+    </div>
+
+    <a href="index.html">BACK</a>
+  </body>
+</html>
