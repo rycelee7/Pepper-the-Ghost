@@ -9,7 +9,6 @@ function preload() {
   // ball.position(55, 50);
 }
 
-
 function setup() {
   createCanvas(1080, 1000);
   background('black');
