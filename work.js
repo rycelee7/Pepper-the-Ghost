@@ -20,6 +20,11 @@ alarm.setAttribute(
   "https://www.soundjay.com/misc/sounds/bell-ringing-05.mp3"
 );
 
+var y = document.getElementsByClassName("reading");
+y[0].style.display = "none";
+var z = document.getElementsByClassName("break");
+z[0].style.display = "none";
+
 // Adding event listeners for the start and reset button
 startBtn.addEventListener("click", () => {
   clearInterval(countdown);
@@ -49,6 +54,9 @@ function timer() {
     clearInterval(countdown);
     alarm.currentTime = 0;
     alarm.play();
+
+    y[0].style.display = "none";
+    z[0].style.display = "block";
 
     // checking if it is break, if break, then breaktime; if not, worktime --> set that * 60 to seconds
     seconds = (isBreak ? breakTime : workTime) * 60;
@@ -109,9 +117,6 @@ function updateHTML() {
   breakMin.textContent = breakTime;
 }
 
-var y = document.getElementsByClassName("reading");
-y[0].style.display = "none";
-
 function startPomodoro() {
   var x = document.getElementsByClassName("hideDivs");
   if (x[0].style.display === "none") {
@@ -123,11 +128,11 @@ function startPomodoro() {
   }
 }
 
-function setup() {
-  var canvas = createCanvas(450, 800);
-  // Move the canvas so it’s inside our <div id="sketch-holder">.
-  canvas.parent("work-sketch-holder");
-}
+// function setup() {
+//   var canvas = createCanvas(450, 800);
+//   // Move the canvas so it’s inside our <div id="sketch-holder">.
+//   canvas.parent("work-sketch-holder");
+// }
 
 window.setInterval(updateHTML, 100);
 
