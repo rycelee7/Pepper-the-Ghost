@@ -45,13 +45,13 @@ if (client) {
   });
 }
 
-// function preload() {}
-
-function setup() {
+function preload() {
   pepperIdleGif = loadImage("animations/pepper.gif");
   pepperWaveGif = loadImage("animations/waving.gif");
   pepperSquareGif = loadImage("animations/square.gif");
+}
 
+function setup() {
   var canvas = createCanvas(450, 800);
   // Move the canvas so it’s inside our <div id="sketch-holder">.
   canvas.parent("sketch-holder");
