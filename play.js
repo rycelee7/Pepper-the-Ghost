@@ -1,4 +1,4 @@
-let pepperIdle = false;
+let pepperIdle = true;
 let pepperWaves = false;
 let pepperSquare = false;
 
