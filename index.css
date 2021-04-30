@@ -34,18 +34,37 @@ img[src="uiDesigns/title.png"] {
   /* border: 1px solid red; */
   position: relative;
   top: 17em;
+  transition: all 0.2s ease-in-out;
 }
 
 .buttons1 {
   animation: 3s ease-in-out 0s 1 fadeIn;
+  transition: all 0.2s ease-in-out;
+}
+
+.buttons1:active {
+  transform: scale(1.1);
+  transition: 0.1s;
 }
 
 .buttons2 {
   animation: 4s ease-in-out 0s 1 fadeIn;
+  transition: all 0.2s ease-in-out;
+}
+
+.buttons2:active {
+  transform: scale(1.1);
+  transition: 0.1s;
 }
 
 .buttons3 {
   animation: 5s ease-in-out 0s 1 fadeIn;
+  transition: all 0.2s ease-in-out;
+}
+
+.buttons3:active {
+  transform: scale(1.1);
+  transition: 0.1s;
 }
 
 .container {

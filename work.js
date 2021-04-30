@@ -57,21 +57,29 @@ function timer() {
 
     y[0].style.display = "none";
     z[0].style.display = "block";
+    countdown = setInterval(timer, 1000);
 
     // checking if it is break, if break, then breaktime; if not, worktime --> set that * 60 to seconds
     seconds = (isBreak ? breakTime : workTime) * 60;
     isBreak = !isBreak;
+    if (seconds < 0) {
+      y[0].style.display = "block";
+      z[0].style.display = "none";
+    }
   }
 }
 
 // update work times and break times
+// what the buttons increment by
 let increment = 1;
 
 let incrementFunctions = {
+  // max you can go up to is 60 mins
   "#work-plus": function () {
     workTime = Math.min(workTime + increment, 60);
   },
   "#work-minus": function () {
+    // min you can go down to is 5 minutes
     workTime = Math.max(workTime - increment, 1);
   },
   "#break-plus": function () {
