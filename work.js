@@ -1,7 +1,7 @@
 let countdown = 0; // variable to set/clear intervals
 let seconds = 1200; // seconds left on the clock
-let workTime = 0.05;
-let breakTime = 0.05;
+let workTime = 0.1;
+let breakTime = 0.1;
 let isWork = true;
 let isPaused = true;
 
@@ -65,9 +65,10 @@ function timer() {
       breaking[0].style.display = "block";
     } else {
       breaking[0].style.display = "none";
+      reading[0].style.display = "block";
     }
     // breakingGif.src = "";
-    // breakingGif.src = "animations/break.gif" + "?a=" + Math.random();
+    breakingGif.src = "animations/break.gif" + "?a=" + Math.random();
 
     countdown = setInterval(timer, 1000);
 
@@ -78,7 +79,7 @@ function timer() {
       reading[0].style.display = "block";
       breaking[0].style.display = "none";
       // breakingGif.src = "";
-      // breakingGif.src = "animations/break.gif" + "?a=" + Math.random();
+      breakingGif.src = "animations/break.gif" + "?a=" + Math.random();
     }
   }
 }
