@@ -19,6 +19,19 @@ html {
   width: 100%;
 }
 
+#backbtn {
+  background-color: #383838;
+  border: none;
+  color: white;
+  width: 5rem;
+  text-align: center;
+  display: inline-block;
+  font-family: "futura";
+  font-size: 16px;
+  border-radius: 30px;
+  /* border: 2px solid #80493e; */
+}
+
 body {
   margin: 0;
 }
@@ -48,14 +61,14 @@ a {
   color: white;
   font-size: 1em;
   cursor: pointer;
-  border: 2px solid rgb(128, 165, 245);
+  border: 2px solid rgba(255, 169, 120, 0.753);
 }
 
 #start-btn {
   height: 40px;
   width: 90px;
   border-radius: 20px;
-  background: #4f5387;
+  background: #383838;
 }
 
 .btn-settings {
@@ -81,7 +94,7 @@ a {
   border-radius: 50px;
   width: 80px;
   height: 80px;
-  background: #5281b6;
+  background: #383838;
 }
 
 .container {
