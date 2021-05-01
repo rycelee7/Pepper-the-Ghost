@@ -30,13 +30,13 @@ if (client) {
 
     console.log(msgString);
 
-    if (msgString.includes("wave")) {
+    if (msgString.includes("Wave")) {
       pepperWaves = true;
       pepperIdle = false;
       console.log("successful wave!");
     }
 
-    if (msgString.includes("counter-clockwise")) {
+    if (msgString.includes("Counter Clockwise")) {
       pepperSquare = true;
       pepperIdle = false;
       console.log("successful square!");
