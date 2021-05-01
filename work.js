@@ -1,8 +1,8 @@
 let countdown = 0; // variable to set/clear intervals
 let seconds = 1200; // seconds left on the clock
-let workTime = 20;
-let breakTime = 5;
-let isBreak = true;
+let workTime = 0.05;
+let breakTime = 0.05;
+let isWork = true;
 let isPaused = true;
 
 const status = document.querySelector("#status");
@@ -20,15 +20,20 @@ alarm.setAttribute(
   "https://www.soundjay.com/misc/sounds/bell-ringing-05.mp3"
 );
 
-var y = document.getElementsByClassName("reading");
-y[0].style.display = "none";
-var z = document.getElementsByClassName("break");
-z[0].style.display = "none";
+var reading = document.getElementsByClassName("reading");
+var isReading = false;
+reading[0].style.display = "none";
+var breaking = document.getElementsByClassName("break");
+breaking[0].style.display = "none";
+var hiding = document.getElementsByClassName("hideDivs");
+
+const breakingGif = document.querySelector(".breaking-gif");
 
 // Adding event listeners for the start and reset button
 startBtn.addEventListener("click", () => {
   clearInterval(countdown);
   isPaused = !isPaused;
+  startPomodoro();
 
   // if it is not paused, set countdown timer to decrease every 1000 ms
   if (!isPaused) {
@@ -42,7 +47,7 @@ resetBtn.addEventListener("click", () => {
   seconds = workTime * 60;
   countdown = 0;
   isPaused = true;
-  isBreak = true;
+  isWork = true;
 });
 
 // timer, which will handle the countdown
@@ -55,16 +60,25 @@ function timer() {
     alarm.currentTime = 0;
     alarm.play();
 
-    y[0].style.display = "none";
-    z[0].style.display = "block";
+    if (isWork == true) {
+      reading[0].style.display = "none";
+      breaking[0].style.display = "block";
+    } else {
+      breaking[0].style.display = "none";
+    }
+    // breakingGif.src = "";
+    // breakingGif.src = "animations/break.gif" + "?a=" + Math.random();
+
     countdown = setInterval(timer, 1000);
 
     // checking if it is break, if break, then breaktime; if not, worktime --> set that * 60 to seconds
-    seconds = (isBreak ? breakTime : workTime) * 60;
-    isBreak = !isBreak;
+    seconds = (isWork ? breakTime : workTime) * 60;
+    isWork = !isWork;
     if (seconds < 0) {
-      y[0].style.display = "block";
-      z[0].style.display = "none";
+      reading[0].style.display = "block";
+      breaking[0].style.display = "none";
+      // breakingGif.src = "";
+      // breakingGif.src = "animations/break.gif" + "?a=" + Math.random();
     }
   }
 }
@@ -118,7 +132,7 @@ function buttonDisplay() {
 function updateHTML() {
   countdownDisplay();
   buttonDisplay();
-  isBreak
+  isWork
     ? (status.textContent = "Keep Working")
     : (status.textContent = "Take a Break!");
   workMin.textContent = workTime;
@@ -126,21 +140,26 @@ function updateHTML() {
 }
 
 function startPomodoro() {
-  var x = document.getElementsByClassName("hideDivs");
-  if (x[0].style.display === "none") {
-    x[0].style.display = "block";
-    y[0].style.display = "none";
-  } else {
-    x[0].style.display = "none";
-    y[0].style.display = "block";
+  // if in a break
+  if (isWork) {
+    if (hiding[0].style.display === "none") {
+      hiding[0].style.display = "block";
+      reading[0].style.display = "none";
+    } else {
+      hiding[0].style.display = "none";
+      reading[0].style.display = "block";
+    }
+  }
+  if (!isWork) {
+    if (hiding[0].style.display === "none") {
+      hiding[0].style.display = "block";
+      breaking[0].style.display = "none";
+    } else {
+      hiding[0].style.display = "none";
+      breaking[0].style.display = "block";
+    }
   }
 }
-
-// function setup() {
-//   var canvas = createCanvas(450, 800);
-//   // Move the canvas so it’s inside our <div id="sketch-holder">.
-//   canvas.parent("work-sketch-holder");
-// }
 
 window.setInterval(updateHTML, 100);
 

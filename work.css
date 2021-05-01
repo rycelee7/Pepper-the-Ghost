@@ -19,10 +19,6 @@ html {
   width: 100%;
 }
 
-/* #work-sketch-holder {
-  border: 1px solid red;
-} */
-
 body {
   margin: 0;
 }
@@ -103,6 +99,7 @@ a {
 
 .reading-gif {
   width: 100%;
+  margin-top: 100px;
 }
 
 /* #work p,
