@@ -10,11 +10,14 @@ let pepperSquareFrame;
 
 let client = null;
 
-try {
-  client = mqtt.connect("wss://test.mosquitto.org:8081");
-} catch (e) {
-  console.log(e);
-}
+// try {
+client = mqtt.connect("wss://test.mosquitto.org:8081");
+// } catch (e) {
+//   console.log(e);
+// }
+
+// client = mqtt.connect("wss://broker.mqttdashboard.com:8000");
+// console.log(client);
 
 if (client) {
   // when connected
