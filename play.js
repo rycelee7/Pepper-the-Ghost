@@ -11,7 +11,7 @@ let pepperSquareFrame;
 let client = null;
 
 try {
-  client = mqtt.connect("wss://test.mosquitto.org:8081");
+  client = mqtt.connect("wss://mqtt.eclipseprojects.io/mqtt:443");
 } catch (e) {
   console.log(e);
 }
