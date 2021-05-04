@@ -110,12 +110,12 @@ function draw() {
   }
 }
 
-function mousePressed() {
-  if (pepperSquare) {
-    pepperSquare = false;
-    pepperIdle = true;
-  } else {
-    pepperSquare = true;
-    pepperIdle = false;
-  }
-}
+// function mousePressed() {
+//   if (pepperSquare) {
+//     pepperSquare = false;
+//     pepperIdle = true;
+//   } else {
+//     pepperSquare = true;
+//     pepperIdle = false;
+//   }
+// }
