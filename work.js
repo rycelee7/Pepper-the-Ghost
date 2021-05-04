@@ -1,6 +1,6 @@
 let countdown = 0; // variable to set/clear intervals
 let seconds = 1200; // seconds left on the clock
-let workTime = 20;
+let workTime = 25;
 let breakTime = 5;
 let isWork = true;
 let isPaused = true;
@@ -95,7 +95,7 @@ let incrementFunctions = {
   },
   "#work-minus": function () {
     // min you can go down to is 5 minutes
-    workTime = Math.max(workTime - increment, 1);
+    workTime = Math.max(workTime - increment, 5);
   },
   "#break-plus": function () {
     breakTime = Math.min(breakTime + increment, 60);
