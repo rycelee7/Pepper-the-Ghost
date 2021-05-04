@@ -1,7 +1,7 @@
 let countdown = 0; // variable to set/clear intervals
 let seconds = 1200; // seconds left on the clock
-let workTime = 0.1;
-let breakTime = 0.1;
+let workTime = 20;
+let breakTime = 5;
 let isWork = true;
 let isPaused = true;
 
@@ -86,7 +86,7 @@ function timer() {
 
 // update work times and break times
 // what the buttons increment by
-let increment = 1;
+let increment = 5;
 
 let incrementFunctions = {
   // max you can go up to is 60 mins
