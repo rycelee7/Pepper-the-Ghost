@@ -125,17 +125,17 @@ function buttonDisplay() {
     startBtn.textContent = "START";
   } else if (isPaused && countdown !== 0) {
     startBtn.textContent = "Continue";
+    document.getElementById("start-btn").style.opacity = "1";
   } else {
     startBtn.textContent = "Pause";
+    document.getElementById("start-btn").style.opacity = "0.3";
   }
 }
 
 function updateHTML() {
   countdownDisplay();
   buttonDisplay();
-  isWork
-    ? (status.textContent = "Keep Working")
-    : (status.textContent = "Take a Break!");
+  isWork ? (status.textContent = "") : (status.textContent = "");
   workMin.textContent = workTime;
   breakMin.textContent = breakTime;
 }
