@@ -1,10 +1,10 @@
 {
   "short_name": "Pepper the Ghost",
   "name": "Pepper the Ghost",
-  "start_url": "/Pepper-the-Ghost/",
+  "start_url": "/",
   "background_color": "#3367D6",
   "display": "standalone",
-  "scope": "https://rycelee7.github.io/Pepper-the-Ghost",
+  "scope": "/",
   "theme_color": "#3367D6",
   "description": "Pepper the Ghost"
 }
