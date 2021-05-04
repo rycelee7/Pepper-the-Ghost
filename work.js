@@ -61,8 +61,8 @@ function timer() {
     alarm.play();
 
     if (isWork == true) {
-      reading[0].style.display = "none";
       breaking[0].style.display = "block";
+      reading[0].style.display = "none";
     } else {
       breaking[0].style.display = "none";
       reading[0].style.display = "block";
